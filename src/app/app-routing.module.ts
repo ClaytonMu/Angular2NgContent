@@ -17,13 +17,14 @@ import { CardsComponent } from './cards/cards.component';
 import { fallbackRoute } from './fallback-route';
 
 const routes: Routes = [
-  { path: '', component: CalendarComponent,
+  { path: '', component: LayoutComponent,
     children: [
 
       //{ path: '', redirectTo: '/form2', pathMatch: 'full' },
       //{ path: 'form2', component: Form2Component},
       //{ path: 'form', component: FormComponent },
       //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+      { path: 'calendar', component: CalendarComponent},
       { path: 'dashboard', component: DashboardComponent },
       { path: 'cards', component: CardsComponent },
       { path: 'cards/:num', component: CardsComponent },

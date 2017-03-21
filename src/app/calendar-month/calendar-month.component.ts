@@ -22,12 +22,12 @@ export class CalendarMonthComponent implements OnInit {
     this.lastDate = new Date(nowDate.getFullYear(), nowDate.getMonth() + 1, 0).getDay();
 
     for(let j = 0; j < this.firstDate; j++) {
-        let emptyDay = {date: '', content: ''};
+        let emptyDay = {date: '', details: []};
         this.days.push(emptyDay);
     }
     
     for(let i = 0; i < this.monthDays; i++) {
-      let day = {date: i + 1, content: '這是內容' + (i+1).toString()};
+      let day = {date: i + 1, details: [{type:'devolve', content:'這是內容' + (i+1).toString()}]};
       this.days.push(day);
 
       let dayIndex = new Date(nowDate.getFullYear(), nowDate.getMonth(), i + 1).getDay()
@@ -40,7 +40,7 @@ export class CalendarMonthComponent implements OnInit {
       if(i==this.monthDays - 1)
       {
         for(let j = 6; j > this.lastDate; j--) {
-          let emptyDay = {date: '', content: ''};
+          let emptyDay = {date: '', details: ''};
           this.days.push(emptyDay);
         }
         this.weeks.push(this.days);

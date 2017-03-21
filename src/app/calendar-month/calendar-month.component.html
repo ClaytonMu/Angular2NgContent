@@ -4,13 +4,10 @@
   </tr>
   <tr *ngFor="let week of weeks">
     <td *ngFor="let days of week">
-      <app-calendar-day>
+      <app-calendar-day [details]="days.details">
         <table class="nonBorder">
           <tr>
             <td>{{days.date}}</td>
-          </tr>
-          <tr>
-            <td>{{days.content}}</td>
           </tr>
         </table>
       </app-calendar-day>

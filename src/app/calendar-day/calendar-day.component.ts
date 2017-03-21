@@ -7,8 +7,10 @@ import {Input, Component,  OnInit} from '@angular/core';
 })
 export class CalendarDayComponent implements OnInit {
 
-  @Input() calendarDayEvent = [];
-  constructor() { }
+  @Input() details = [];
+  constructor() {
+    
+   }
 
   ngOnInit() {
   }

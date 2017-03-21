@@ -6,6 +6,10 @@ table{
     width: 100%;
 }
 
+.nonBorder {
+    width:100%
+}
+
 .nonBorder td{
     border:0px;
 }
